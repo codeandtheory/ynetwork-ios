@@ -1,6 +1,8 @@
 ![Y—Network](https://user-images.githubusercontent.com/1037520/202389911-bd44883e-aa11-4584-9f78-3934ef1b4bf2.jpeg)
 _A networking layer for iOS and tvOS._
 
+🤖 Looking for the Android version? Check it out [here](https://github.com/yml-org/ynetwork-android).
+
 Documentation
 ----------
 
