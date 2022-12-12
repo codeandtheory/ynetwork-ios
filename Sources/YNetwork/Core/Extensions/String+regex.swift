@@ -14,7 +14,7 @@ extension String {
     /// - Parameter pattern: the regular expression pattern to evaluate
     /// - Returns: `true` if the string matches the pattern, otherwise `false`.
     public func matches(regex pattern: String) -> Bool {
-        return self.range(
+        range(
             of: pattern,
             options: .regularExpression,
             range: nil,

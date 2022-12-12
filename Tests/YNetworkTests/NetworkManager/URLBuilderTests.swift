@@ -9,6 +9,9 @@
 import XCTest
 @testable import YNetwork
 
+// Large tuples help us build unit test expectations concisely
+// swiftlint:disable large_tuple
+
 typealias PathTestCase = (basePath: PathTestUrl?, path: String, output: String)
 typealias FormUrlTestCase = (key: String, value: Any, output: String?)
 typealias QueryTestCase = (params: Parameters, output: String)

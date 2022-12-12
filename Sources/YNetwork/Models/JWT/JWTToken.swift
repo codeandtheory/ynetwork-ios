@@ -10,9 +10,13 @@ import Foundation
 
 /// JWT token.
 public struct JWTToken {
+    /// JWT token header
     public let header: [String: Any]
+    /// JWT token body
     public let body: [String: Any]
+    /// JWT token signature
     public let signature: String?
+    /// Original JWT token string
     public let string: String
     
     /// public init method
