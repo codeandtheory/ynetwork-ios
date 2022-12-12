@@ -30,7 +30,7 @@ open class NetworkManager: NSObject {
     @available(iOS 14.0, tvOS 14.0, *)
     open var logger: Logger? {
         get {
-            return _logger as? Logger
+            _logger as? Logger
         } set {
             _logger = newValue
         }

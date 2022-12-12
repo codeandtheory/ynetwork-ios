@@ -37,11 +37,11 @@ final class MockURLNetworkEngine: URLNetworkEngine {
     }
 
     override func submitBackgroundDownload(_ request: URLRequest) throws -> Cancelable {
-        return MockURLSessionTask()
+        MockURLSessionTask()
     }
 
     override func submitBackgroundUpload(_ request: URLRequest, fileUrl: URL) throws -> Cancelable {
-        return MockURLSessionTask()
+        MockURLSessionTask()
     }
 }
 

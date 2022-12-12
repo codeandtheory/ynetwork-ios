@@ -15,6 +15,6 @@ let kUrlSchemaRegex = "^(ht|f)tp(s?)\\:\\/\\/"
 extension String {
     /// Determines whether the string begins with `http://`, `https://`, `ftp://`, or `ftps://`
     public var isAbsoluteURLPath: Bool {
-        return self.matches(regex: kUrlSchemaRegex)
+        matches(regex: kUrlSchemaRegex)
     }
 }

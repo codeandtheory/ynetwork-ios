@@ -79,25 +79,36 @@ public protocol NetworkRequest {
 /// Default implementation for Network Request properties.
 /// The only required property to implement is `path`. Everything else has default values.
 public extension NetworkRequest {
+    /// Uses no base path
     var basePath: PathRepresentable? { nil }
 
+    /// Uses `.GET` HTTP method
     var method: HttpMethod { .GET }
 
+    /// Includes no additional headers
     var headers: HttpHeaders? { nil }
 
+    /// Sets `.JSON` as request content type
     var requestType: RequestContentType { .JSON }
 
+    /// Sets `.JSON` as response content type
     var responseType: ResponseContentType { .JSON }
 
+    /// No query parameters
     var queryParameters: ParametersBuilder? { nil }
 
+    /// No body
     var body: BodyBuilder? { nil }
 
+    /// Uses the default timeout interval
     var timeoutInterval: TimeInterval { 0 }
 
+    /// Uses the default cache policy
     var cachePolicy: URLRequest.CachePolicy? { nil }
-    
+
+    /// Uses the default parser factory
     var parserFactory: DataParserFactory? { nil }
 
+    /// Uses session tokens (if `NetworkManager.sessionManager` is specified)
     var usesSession: Bool { true }
 }
