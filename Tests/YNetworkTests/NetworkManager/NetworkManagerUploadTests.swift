@@ -71,7 +71,7 @@ final class NetworkManagerUploadTests: XCTestCase {
         let task = try XCTUnwrap(sut.submitBackgroundUpload(request) { _ in })
         task.cancel() // this will make it fail
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: timeout)
 
         XCTAssertNotNil(sut.receivedError)
     }
@@ -176,7 +176,9 @@ private final class NetworkManagerSpy: NetworkManager {
             if let httpResponse = task.response as? HTTPURLResponse {
                 switch httpResponse.statusCode {
                 case 200..<300:
-                    break
+                    if task.state == .canceling {
+                        error = NetworkSpyError.cancelled
+                    }
                 case 401:
                     error = NetworkError.unauthenticated
                 default:
@@ -211,4 +213,8 @@ extension NetworkManagerSpy: URLSessionDataDelegate {
     func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
         self.receivedData = data
     }
+}
+
+public enum NetworkSpyError: Error {
+    case cancelled
 }
