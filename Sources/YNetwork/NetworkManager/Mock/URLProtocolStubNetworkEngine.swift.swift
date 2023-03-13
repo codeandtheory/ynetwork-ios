@@ -13,6 +13,13 @@ final public class URLProtocolStubNetworkEngine: NetworkEngine {
     private(set) var session: URLSession!
     internal let protocolClasses: [AnyClass]
 
+    /// Whether created background upload and download tasks should be autoresumed.
+    /// Default = `true`.
+    ///
+    /// For unit testing it is sometimes useful to set this to `false` and manually call `resume()`
+    /// on the `URLSessionTask` returned from the submit methods.
+    public var autoResumesBackgroundTasks: Bool = true
+
     /// Initializes an URLProtocolStubNetworkEngine with protocolClasses
     /// - Parameter protocolClasses: URLProtocol class that need to be stub
     /// default class will be URLProtocolStub
@@ -75,7 +82,9 @@ final public class URLProtocolStubNetworkEngine: NetworkEngine {
         // make a URLSessionDownloadTask, resume it, then return it
         let downloadTask = session.downloadTask(with: request)
         downloadTask.taskDescription = "\(request: request)"
-        downloadTask.resume()
+        if autoResumesBackgroundTasks {
+            downloadTask.resume()
+        }
         return downloadTask
     }
 
@@ -100,7 +109,9 @@ final public class URLProtocolStubNetworkEngine: NetworkEngine {
         // make a URLSessionUploadTask, resume it, then return it
         let uploadTask = session.uploadTask(with: request, from: data)
         uploadTask.taskDescription = "\(request: request)"
-        uploadTask.resume()
+        if autoResumesBackgroundTasks {
+            uploadTask.resume()
+        }
         return uploadTask
     }
 }
