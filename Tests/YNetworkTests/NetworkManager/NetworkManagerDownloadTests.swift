@@ -130,6 +130,9 @@ final class NetworkManagerDownloadTests: XCTestCase {
 
         let engine = try XCTUnwrap(sut.configuration?.networkEngine as? URLProtocolStubNetworkEngine)
         engine.autoResumesBackgroundTasks = false
+        defer {
+            engine.autoResumesBackgroundTasks = true
+        }
 
         URLProtocolStub.appendStub(withData: makeData(), statusCode: 200, type: .download)
 
@@ -139,7 +142,7 @@ final class NetworkManagerDownloadTests: XCTestCase {
         task.cancel() // this will make it fail
         task.resume() // resume it
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: timeout)
 
         XCTAssertNotNil(sut.receivedError)
     }

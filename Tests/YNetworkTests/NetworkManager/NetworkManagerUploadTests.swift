@@ -66,6 +66,9 @@ final class NetworkManagerUploadTests: XCTestCase {
 
         let engine = try XCTUnwrap(sut.configuration?.networkEngine as? URLProtocolStubNetworkEngine)
         engine.autoResumesBackgroundTasks = false
+        defer {
+            engine.autoResumesBackgroundTasks = true
+        }
 
         URLProtocolStub.appendStub(withData: data, statusCode: 200, type: .upload)
 
