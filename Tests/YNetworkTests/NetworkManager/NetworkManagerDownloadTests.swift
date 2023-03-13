@@ -128,12 +128,16 @@ final class NetworkManagerDownloadTests: XCTestCase {
         let expectation = expectation(description: "Wait for download failure.")
         sut.expectation = expectation
 
+        let engine = try XCTUnwrap(sut.configuration?.networkEngine as? URLProtocolStubNetworkEngine)
+        engine.autoResumesBackgroundTasks = false
+
         URLProtocolStub.appendStub(withData: makeData(), statusCode: 200, type: .download)
 
         XCTAssertNil(sut.receivedError)
 
-        let task = try XCTUnwrap(sut.submitBackgroundDownload(ImageDownloadRequest()) { _ in })
+        let task = try XCTUnwrap(sut.submitBackgroundDownload(ImageDownloadRequest()) { _ in } as? URLSessionTask)
         task.cancel() // this will make it fail
+        task.resume() // resume it
 
         wait(for: [expectation], timeout: 1.0)
 
@@ -150,7 +154,7 @@ final class NetworkManagerDownloadTests: XCTestCase {
 
         XCTAssertNotNil(sut.submitBackgroundDownload(ImageDownloadRequest()) { _ in })
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: timeout)
 
         XCTAssertNotNil(sut.receivedError)
     }
@@ -179,7 +183,7 @@ final class NetworkManagerDownloadTests: XCTestCase {
 
         XCTAssertNotNil(task, "Expected submit to return a task")
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: timeout)
 
         XCTAssertEqual(caught as? NetworkError, NetworkError.unauthenticated)
     }
@@ -209,7 +213,7 @@ final class NetworkManagerDownloadTests: XCTestCase {
 
         XCTAssertNotNil(task, "Expected submit to return a task")
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: timeout)
 
         XCTAssertEqual((caught as? HttpError)?.statusCode, statusCode)
     }
