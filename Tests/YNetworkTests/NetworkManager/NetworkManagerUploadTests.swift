@@ -64,12 +64,16 @@ final class NetworkManagerUploadTests: XCTestCase {
         let expectation = expectation(description: "Wait for upload failure.")
         sut.expectation = expectation
 
+        let engine = try XCTUnwrap(sut.configuration?.networkEngine as? URLProtocolStubNetworkEngine)
+        engine.autoResumesBackgroundTasks = false
+
         URLProtocolStub.appendStub(withData: data, statusCode: 200, type: .upload)
 
         XCTAssertNil(sut.receivedError)
 
-        let task = try XCTUnwrap(sut.submitBackgroundUpload(request) { _ in })
+        let task = try XCTUnwrap(sut.submitBackgroundUpload(request) { _ in } as? URLSessionTask)
         task.cancel() // this will make it fail
+        task.resume() // resume it
 
         wait(for: [expectation], timeout: timeout)
 
