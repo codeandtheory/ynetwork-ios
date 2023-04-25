@@ -285,3 +285,4 @@ final class NetworkManagerFailureTests: XCTestCase {
 private enum MockError: Error {
     case somethingWicked
 }
+// swiftlint:enable identifier_name

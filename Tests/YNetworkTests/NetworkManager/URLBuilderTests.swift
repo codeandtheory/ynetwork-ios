@@ -287,3 +287,4 @@ final class URLBuilderTests: XCTestCase {
         }
     }
 }
+// swiftlint:enable large_tuple
