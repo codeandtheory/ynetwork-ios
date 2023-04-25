@@ -47,7 +47,7 @@ extension TriviaResponse {
                     "question": "Which river flows through the Scottish city of Glasgow?",
                     "correct_answer": "Clyde",
                     "incorrect_answers": ["Tay", "Dee", "Tweed"]
-                ], [
+                ] as [String: Any], [
                     "category": "General Knowledge",
                     "type": "multiple",
                     "difficulty": "medium",
