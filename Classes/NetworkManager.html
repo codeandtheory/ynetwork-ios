@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NetworkManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/NetworkManager" class="dashAnchor"></a>
+
+    <a title="NetworkManager Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          YNetwork Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">YNetwork Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      NetworkManager Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkManager.html">NetworkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLBuilder.html">URLBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLNetworkEngine.html">URLNetworkEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLProtocolStub.html">URLProtocolStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLProtocolStub/TaskType.html">– TaskType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLProtocolStubNetworkEngine.html">URLProtocolStubNetworkEngine</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HttpResponseType.html">HttpResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ImageContentType.html">ImageContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/JWTDecodeError.html">JWTDecodeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MultipartElement.html">MultipartElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetworkError.html">NetworkError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RequestContentType.html">RequestContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ResponseContentType.html">ResponseContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/UIImageDataType.html">UIImageDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CharacterSet.html">CharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Parameters.html">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String/StringInterpolation.html">– StringInterpolation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URLRequest.html">URLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/c:objc(cs)NSURLSessionTask">URLSessionTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BodyBuilder.html">BodyBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Cancelable.html">Cancelable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataEncoder.html">DataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataParserFactory.html">DataParserFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JWTTokenRepresentable.html">JWTTokenRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MultipartBuilder.html">MultipartBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MultipartFile.html">MultipartFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MultipartRequest.html">MultipartRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkEngine.html">NetworkEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkRequest.html">NetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ParametersBuilder.html">ParametersBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PathRepresentable.html">PathRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/UIImageMultipartFile.html">UIImageMultipartFile</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/EmptyNetworkResponse.html">EmptyNetworkResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FormURLEncoder.html">FormURLEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GifBuilder.html">GifBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HttpError.html">HttpError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageBuilder.html">ImageBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/JSONDataParserFactory.html">JSONDataParserFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/JWTToken.html">JWTToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MultiImageBuilder.html">MultiImageBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MultipartFileInfo.html">MultipartFileInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkEngineConfiguration.html">NetworkEngineConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkManagerConfiguration.html">NetworkManagerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UIImageMultipartFileInfo.html">UIImageMultipartFileInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork13APICompletiona">APICompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork19FileDownloadHandlera">FileDownloadHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork10HttpHeadera">HttpHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork11HttpHeadersa">HttpHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork23NetworkEngineCompletiona">NetworkEngineCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork10Parametersa">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork10Percentagea">Percentage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>NetworkManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">NetworkManager</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NetworkManager</span><span class="p">:</span> <span class="kt">URLSessionDownloadDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NetworkManager</span><span class="p">:</span> <span class="kt">URLSessionTaskDelegate</span></code></pre>
+
+                </div>
+              </div>
+            <p>Network manager for making API calls.</p>
+
+<p>NetworkManager will be your app&rsquo;s main point of contact with the networking layer.
+You are strongly discouraged from declaring an instance as a singleton.
+Instead we recommend that you use dependency injection to pass a NetworkManager instance
+to the places in your code where network calls need to be made (Hint: not from your Views, please!)
+NetworkManager is designed to be highly configurable and extendable. This configuration takes place
+via the NetworkManagerConfiguration object.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC6logger2os6LoggerVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/logger" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC6logger2os6LoggerVSgvp">logger</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opt-in logger (iOS 14+ only).</p>
+
+<p>Set a logger to have all submitted network requests and JSON responses logged at the debug level.
+Default behavior is <code>nil</code> (no logging).</p>
+
+<p><strong>Important:</strong> network requests and responses can contain sensitive information, so you should
+not set a logger for production builds.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@available(iOS 14.0, tvOS 14.0, *)</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">logger</span><span class="p">:</span> <span class="kt">Logger</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC07sessionC0AA07SessionC0_pSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sessionManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC07sessionC0AA07SessionC0_pSgvp">sessionManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Optional session manager to handle access and refresh tokens</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">sessionManager</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SessionManager.html">SessionManager</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YNetwork@objc(cs)NetworkManager(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YNetwork@objc(cs)NetworkManager(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes a network manager in an unconfigured state</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC9configure4with07sessionC0yAA0bC13ConfigurationV_AA07SessionC0_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/configure(with:sessionManager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC9configure4with07sessionC0yAA0bC13ConfigurationV_AA07SessionC0_pSgtF">configure(with:<wbr>sessionManager:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configure the network manager. This must be called once prior to calling <code>submit</code> or <code>submitDownload</code>.
+It may be called multiple times, but should only be done if the configuration has changed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span>
+    <span class="n">with</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/NetworkManagerConfiguration.html">NetworkManagerConfiguration</a></span><span class="p">,</span>
+    <span class="nv">sessionManager</span><span class="p">:</span> <span class="kt"><a href="../Protocols/SessionManager.html">SessionManager</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>configuration to use</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>sessionManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>optional session manager (defaults to <code>nil</code>)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC6submit_10completionyAA0B7Request_p_ys6ResultOyxs5Error_pGctSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/submit(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC6submit_10completionyAA0B7Request_p_ys6ResultOyxs5Error_pGctSeRzlF">submit(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Submit a network request.</p>
+
+<p>Immediately completes with an error if the engine has not been configured.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">submit</span><span class="o">&lt;</span><span class="kt">Response</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkRequest.html">NetworkRequest</a></span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:8YNetwork13APICompletiona">APICompletion</a></span><span class="o">&lt;</span><span class="kt">Response</span><span class="o">&gt;</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the network request to submit</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the expected business object upon success, otherwise an error upon failure</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC6submityxAA0B7Request_pYaKSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/submit(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC6submityxAA0B7Request_pYaKSeRzlF">submit(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Asynchronous
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Submit a network request using async/await</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    any error from handling the request
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="n">submit</span><span class="o">&lt;</span><span class="kt">Response</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkRequest.html">NetworkRequest</a></span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span> <span class="k">where</span> <span class="kt">Response</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the request to submit</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>the expected business object (decoded response)</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC24submitBackgroundDownload_8progress17completionHandlerAA10Cancelable_pSgAA0B7Request_p_ySdcSgys6ResultOy10Foundation3URLVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/submitBackgroundDownload(_:progress:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC24submitBackgroundDownload_8progress17completionHandlerAA10Cancelable_pSgAA0B7Request_p_ySdcSgys6ResultOy10Foundation3URLVs5Error_pGctF">submitBackgroundDownload(_:<wbr>progress:<wbr>completionHandler:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Submit a background download network request.</p>
+
+<p>Immediately fails and returns nil if the engine has not been configured.</p>
+
+<p>Upon success completionHandler contains a file URL for the temporary file.
+Because the file is temporary, you must either open the file for reading or move it to
+a permanent location in your app’s sandbox container directory before returning from this delegate method.</p>
+
+<p>If you choose to open the file for reading, you should do the actual reading in another thread to avoid
+blocking the delegate queue.</p>
+
+<p>You would still need to handle the UIApplicationDelegate method for resuming URL session to handle
+restart across application lifecycles.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">submitBackgroundDownload</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkRequest.html">NetworkRequest</a></span><span class="p">,</span>
+    <span class="nv">progress</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8YNetwork15ProgressHandlera">ProgressHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:8YNetwork19FileDownloadHandlera">FileDownloadHandler</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Cancelable.html">Cancelable</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the download network request to submit</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>progress handler (will be called back on main thread)</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>file download handler (will be called back on URLSession background thread).</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a cancelable download task if one was able to be created, otherwise nil if no task was issued</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC22submitBackgroundUpload_8progressAA10Cancelable_pSgAA0B7Request_p_ySdcSgtF"></a>
+                    <a name="//apple_ref/swift/Method/submitBackgroundUpload(_:progress:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC22submitBackgroundUpload_8progressAA10Cancelable_pSgAA0B7Request_p_ySdcSgtF">submitBackgroundUpload(_:<wbr>progress:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Submit a background Upload network request.</p>
+
+<p>Immediately fails and returns nil if the engine has not been configured.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">submitBackgroundUpload</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkRequest.html">NetworkRequest</a></span><span class="p">,</span>
+    <span class="nv">progress</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:8YNetwork15ProgressHandlera">ProgressHandler</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Cancelable.html">Cancelable</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the upload network request to submit</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>progress</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>progress handler (will be called back on main thread)</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>a cancelable upload task if one was able to be created, otherwise nil if no task was issued</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork14NetworkManagerC14peekTaskResult7request4data8response5erroryAA0B7Request_p_10Foundation4DataVSgSo13NSURLResponseCSgs5Error_pSgtF"></a>
+                    <a name="//apple_ref/swift/Method/peekTaskResult(request:data:response:error:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork14NetworkManagerC14peekTaskResult7request4data8response5erroryAA0B7Request_p_10Foundation4DataVSgSo13NSURLResponseCSgs5Error_pSgtF">peekTaskResult(request:<wbr>data:<wbr>response:<wbr>error:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Peek at incoming (data, response, error) returned from the network engine before it gets processed.</p>
+
+<p>Subclass NetworkManager and override this method to get access to raw headers etc.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">peekTaskResult</span><span class="p">(</span>
+    <span class="nv">request</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkRequest.html">NetworkRequest</a></span><span class="p">,</span>
+    <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span>
+    <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">?,</span>
+    <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>request that was executed</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>data from network engine</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>response from network engine</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>error from network engine</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://yml.co" target="_blank" rel="external noopener">Y Media Labs</a>. All rights reserved. (Last updated: 2023-04-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>

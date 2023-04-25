@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>URLProtocolStub Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Class/URLProtocolStub" class="dashAnchor"></a>
+
+    <a title="URLProtocolStub Class Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          YNetwork Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">YNetwork Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      URLProtocolStub Class Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../readme.html">README</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/NetworkManager.html">NetworkManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLBuilder.html">URLBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLNetworkEngine.html">URLNetworkEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLProtocolStub.html">URLProtocolStub</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLProtocolStub/TaskType.html">– TaskType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/URLProtocolStubNetworkEngine.html">URLProtocolStubNetworkEngine</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HttpMethod.html">HttpMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/HttpResponseType.html">HttpResponseType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ImageContentType.html">ImageContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/JWTDecodeError.html">JWTDecodeError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/MultipartElement.html">MultipartElement</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/NetworkError.html">NetworkError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RequestContentType.html">RequestContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/ResponseContentType.html">ResponseContentType</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/UIImageDataType.html">UIImageDataType</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/CharacterSet.html">CharacterSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Data.html">Data</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Encodable.html">Encodable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONDecoder.html">JSONDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/JSONEncoder.html">JSONEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Parameters.html">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String/StringInterpolation.html">– StringInterpolation</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URLRequest.html">URLRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/c:objc(cs)NSURLSessionTask">URLSessionTask</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/BodyBuilder.html">BodyBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/Cancelable.html">Cancelable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataDecoder.html">DataDecoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataEncoder.html">DataEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/DataParserFactory.html">DataParserFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/JWTTokenRepresentable.html">JWTTokenRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MultipartBuilder.html">MultipartBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MultipartFile.html">MultipartFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/MultipartRequest.html">MultipartRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkEngine.html">NetworkEngine</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/NetworkRequest.html">NetworkRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/ParametersBuilder.html">ParametersBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PathRepresentable.html">PathRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/UIImageMultipartFile.html">UIImageMultipartFile</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/EmptyNetworkResponse.html">EmptyNetworkResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/FormURLEncoder.html">FormURLEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/GifBuilder.html">GifBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/HttpError.html">HttpError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/ImageBuilder.html">ImageBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/JSONDataParserFactory.html">JSONDataParserFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/JWTToken.html">JWTToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MultiImageBuilder.html">MultiImageBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/MultipartFileInfo.html">MultipartFileInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkEngineConfiguration.html">NetworkEngineConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/NetworkManagerConfiguration.html">NetworkManagerConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/UIImageMultipartFileInfo.html">UIImageMultipartFileInfo</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork13APICompletiona">APICompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork19FileDownloadHandlera">FileDownloadHandler</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork10HttpHeadera">HttpHeader</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork11HttpHeadersa">HttpHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork23NetworkEngineCompletiona">NetworkEngineCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork10Parametersa">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork10Percentagea">Percentage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:8YNetwork15ProgressHandlera">ProgressHandler</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>URLProtocolStub</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">public</span> <span class="kd">class</span> <span class="kt">URLProtocolStub</span> <span class="p">:</span> <span class="kt">URLProtocol</span></code></pre>
+
+                </div>
+              </div>
+            <p><code>URLProtocol</code>is an abstract class. To intercept requests we need to create a subclass of <code>URLProtocol</code>.
+Required methods when subclassing:
+class func canInit(with request: URLRequest) -&gt; Bool
+class func canonicalRequest(for request: URLRequest) -&gt; URLRequest
+func startLoading()
+func stopLoading()</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC8TaskTypeO"></a>
+                    <a name="//apple_ref/swift/Enum/TaskType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC8TaskTypeO">TaskType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The type of task being stubbed</p>
+
+                        <a href="../Classes/URLProtocolStub/TaskType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">TaskType</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC06appendC0_4typeys6ResultOy10Foundation4DataV_So13NSURLResponseCts5Error_pG_AC8TaskTypeOtFZ"></a>
+                    <a name="//apple_ref/swift/Method/appendStub(_:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC06appendC0_4typeys6ResultOy10Foundation4DataV_So13NSURLResponseCts5Error_pG_AC8TaskTypeOtFZ">appendStub(_:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a predefined request result which will be consumed by URL Loading System.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">appendStub</span><span class="p">(</span>
+    <span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="p">(</span><span class="kt">Data</span><span class="p">,</span> <span class="kt">URLResponse</span><span class="p">),</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">,</span>
+    <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Classes/URLProtocolStub/TaskType.html">TaskType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">data</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>result</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the network request result, either <code>(Data, URLResponse)</code> upon success, or else <code>Error</code> upon failure.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the task type being stubbed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC06appendC014withJSONObject10statusCode4typeyyp_SiAC8TaskTypeOtFZ"></a>
+                    <a name="//apple_ref/swift/Method/appendStub(withJSONObject:statusCode:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC06appendC014withJSONObject10statusCode4typeyyp_SiAC8TaskTypeOtFZ">appendStub(withJSONObject:<wbr>statusCode:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a predefined request result which will be consumed by URL Loading System.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">appendStub</span><span class="p">(</span>
+    <span class="n">withJSONObject</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span>
+    <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+    <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Classes/URLProtocolStub/TaskType.html">TaskType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">data</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>obj</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>JSON object that will be injected as <code>Data</code> by <code>URLProtocolStub</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>HTTP status code of the response that will be injected by <code>URLProtocolStub</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the task type being stubbed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC06appendC08withData10statusCode4typey10Foundation0F0V_SiAC8TaskTypeOtFZ"></a>
+                    <a name="//apple_ref/swift/Method/appendStub(withData:statusCode:type:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC06appendC08withData10statusCode4typey10Foundation0F0V_SiAC8TaskTypeOtFZ">appendStub(withData:<wbr>statusCode:<wbr>type:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a predefined request result which will be consumed by URL Loading System.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">appendStub</span><span class="p">(</span>
+    <span class="n">withData</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+    <span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span>
+    <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Classes/URLProtocolStub/TaskType.html">TaskType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">data</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object that will be injected as <code>Data</code> by <code>URLProtocolStub</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>statusCode</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>HTTP status code of the response that will be injected by <code>URLProtocolStub</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>type</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>the task type being stubbed.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC5resetyyFZ"></a>
+                    <a name="//apple_ref/swift/Method/reset()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC5resetyyFZ">reset()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reset class properties.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">reset</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YNetwork@objc(cs)URLProtocolStub(cm)canInitWithRequest:"></a>
+                    <a name="//apple_ref/swift/Method/canInit(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YNetwork@objc(cs)URLProtocolStub(cm)canInitWithRequest:">canInit(with:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Determines whether the protocol subclass can handle the specified request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">canInit</span><span class="p">(</span><span class="n">with</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request to be handled.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the protocol subclass can handle request, otherwise <code>false</code>.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YNetwork@objc(cs)URLProtocolStub(cm)canonicalRequestForRequest:"></a>
+                    <a name="//apple_ref/swift/Method/canonicalRequest(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YNetwork@objc(cs)URLProtocolStub(cm)canonicalRequestForRequest:">canonicalRequest(for:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a canonical version of the specified request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">canonicalRequest</span><span class="p">(</span><span class="k">for</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The request whose canonical version is desired.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The canonical form of request.</p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YNetwork@objc(cs)URLProtocolStub(im)startLoading"></a>
+                    <a name="//apple_ref/swift/Method/startLoading()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YNetwork@objc(cs)URLProtocolStub(im)startLoading">startLoading()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instance method that starts protocol-specific loading of the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">startLoading</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@YNetwork@objc(cs)URLProtocolStub(im)stopLoading"></a>
+                    <a name="//apple_ref/swift/Method/stopLoading()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@YNetwork@objc(cs)URLProtocolStub(im)stopLoading">stopLoading()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Instance method that stops protocol-specific loading of the request.
+Requires to be overridden with empty implementation.
+Failing to do so will throw run time error as <code>URLProtocol</code> is an abstract class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stopLoading</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC8makeData14withJSONObject10Foundation0E0VSgyp_tFZ"></a>
+                    <a name="//apple_ref/swift/Method/makeData(withJSONObject:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC8makeData14withJSONObject10Foundation0E0VSgyp_tFZ">makeData(withJSONObject:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Make data from any JSON obejct</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">makeData</span><span class="p">(</span><span class="n">withJSONObject</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8YNetwork15URLProtocolStubC19makeHTTPURLResponse10statusCode14expectedLengthSo17NSHTTPURLResponseCSgSi_SitFZ"></a>
+                    <a name="//apple_ref/swift/Method/makeHTTPURLResponse(statusCode:expectedLength:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8YNetwork15URLProtocolStubC19makeHTTPURLResponse10statusCode14expectedLengthSo17NSHTTPURLResponseCSgSi_SitFZ">makeHTTPURLResponse(statusCode:<wbr>expectedLength:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Make HTTP url response with status code for any request</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="kd">func</span> <span class="nf">makeHTTPURLResponse</span><span class="p">(</span><span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">expectedLength</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">HTTPURLResponse</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2023 <a class="link" href="https://yml.co" target="_blank" rel="external noopener">Y Media Labs</a>. All rights reserved. (Last updated: 2023-04-25)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
