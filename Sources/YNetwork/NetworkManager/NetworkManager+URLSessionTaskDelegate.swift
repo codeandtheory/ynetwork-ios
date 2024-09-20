@@ -10,7 +10,7 @@ import Foundation
 
 // MARK: - URLSessionTaskDelegate
 
-extension NetworkManager: URLSessionTaskDelegate {
+extension NetworkManager: URLSessionTaskDelegate, URLSessionDataDelegate {
     /// :nodoc:
     public func urlSession(
         _ session: URLSession,
@@ -38,6 +38,17 @@ extension NetworkManager: URLSessionTaskDelegate {
             fileDownload.urlSession(session, task: task, didCompleteWithError: error)
         } else if task is URLSessionUploadTask {
             fileUpload.urlSession(session, task: task, didCompleteWithError: error)
+        }
+    }
+    
+    /// :nodoc:
+    public func urlSession(
+        _ session: URLSession,
+        dataTask: URLSessionDataTask,
+        didReceive data: Data
+    ) {
+        if dataTask is URLSessionUploadTask {
+            fileUpload.urlSession(session, dataTask: dataTask, didReceive: data)
         }
     }
 }

@@ -15,6 +15,8 @@ public typealias Percentage = Double
 ///
 /// Guaranteed to be called back on the main thread
 public typealias ProgressHandler = (Percentage) -> Void
+public typealias CompletionHandler = (Data) -> Void
+public typealias CancellationHandler = () -> Void
 
 /// Asynchronous completion handler that reports the status of request.
 ///
@@ -29,6 +31,7 @@ public typealias FileDownloadHandler = (Result<URL, Error>) -> Void
 internal class FileProgress: NSObject {
     /// Stores the progress handlers to be called, keyed by unique task identifier
     private var progressHandlersByTaskID: [Int: ProgressHandler] = [:]
+    private var completionHandlerByTaskID: [Int: CompletionHandler] = [:]
     private var downloadHandlersByTaskID: [Int: FileDownloadHandler] = [:]
 
     /// Updates the progress handler for the specified task with the percentage value
@@ -39,6 +42,17 @@ internal class FileProgress: NSObject {
         guard let progressHandler = progressHandlersByTaskID[taskIdentifier] else { return }
         DispatchQueue.main.async {
             progressHandler(percent)
+        }
+    }
+    
+    /// Invokes the completion handler for the specified task with the response data
+    /// - Parameters:
+    ///   - data: the response data that can be decoded for custom responses such as error messages
+    ///   - taskIdentifier: unique task identifier
+    func receive(data: Data, forKey taskIdentifier: Int) {
+        guard let completionHandler = completionHandlerByTaskID[taskIdentifier] else { return }
+        DispatchQueue.main.async {
+            completionHandler(data)
         }
     }
 
@@ -57,10 +71,17 @@ internal class FileProgress: NSObject {
     /// - Parameters:
     ///   - cancelable: optional cancelable task
     ///   - progress: optional progress handler
-    func register(_ cancelable: Cancelable?, progress: ProgressHandler?) {
+    func register(
+        _ cancelable: Cancelable?,
+        progress: ProgressHandler?,
+        completion: CompletionHandler? = nil
+    ) {
         guard let task = cancelable as? URLSessionTask,
               let progress = progress else { return }
         progressHandlersByTaskID[task.taskIdentifier] = progress
+        if let completion = completion {
+            completionHandlerByTaskID[task.taskIdentifier] = completion
+        }
     }
     
     /// Registers a data task for file progress.
@@ -83,6 +104,12 @@ internal class FileProgress: NSObject {
     func unregister(forKey taskIdentifier: Int) {
         progressHandlersByTaskID.removeValue(forKey: taskIdentifier)
         downloadHandlersByTaskID.removeValue(forKey: taskIdentifier)
+    }
+    
+    /// Unregisters a completion handler once final response received
+    /// - Parameter taskIdentifier: unique task identifier
+    func unregisterCompletion(forKey taskIdentifier: Int) {
+        completionHandlerByTaskID.removeValue(forKey: taskIdentifier)
     }
 
     func checkResponseForError(task: URLSessionTask) -> Error? {
