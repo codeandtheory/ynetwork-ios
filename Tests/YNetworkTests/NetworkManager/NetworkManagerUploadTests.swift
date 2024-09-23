@@ -74,7 +74,7 @@ final class NetworkManagerUploadTests: XCTestCase {
 
         XCTAssertNil(sut.receivedError)
 
-        let task = try XCTUnwrap(sut.submitBackgroundUpload(request) { _ in } as? URLSessionTask)
+        let task = try XCTUnwrap(sut.submitBackgroundUpload(request, completionHandler:  { _ in }) as? URLSessionTask)
         task.cancel() // this will make it fail
         task.resume() // resume it
 
@@ -90,7 +90,7 @@ final class NetworkManagerUploadTests: XCTestCase {
         XCTAssertNil(sut.receivedError)
 
         URLProtocolStub.appendStub(.failure(NetworkError.invalidResponse), type: .upload)
-        let task = sut.submitBackgroundUpload(request) { _ in }
+        let task = sut.submitBackgroundUpload(request, completionHandler:  { _ in })
 
         XCTAssertNotNil(task)
 
@@ -154,7 +154,7 @@ final class NetworkManagerUploadTests: XCTestCase {
         let sut = NetworkManager()
 
         // Given we submit a request without first configuring the network manager
-        let task = sut.submitBackgroundUpload(request) { _ in }
+        let task = sut.submitBackgroundUpload(request, completionHandler:  { _ in })
 
         // We don't expect a task to be returned
         XCTAssertNil(task)
@@ -209,16 +209,14 @@ private final class NetworkManagerSpy: NetworkManager {
             self.fulfill()
         }
     }
+    
+    override func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
+        self.receivedData = data
+    }
 
     func fulfill() {
         expectation?.fulfill()
         expectation = nil
-    }
-}
-
-extension NetworkManagerSpy: URLSessionDataDelegate {
-    func urlSession(_ session: URLSession, dataTask: URLSessionDataTask, didReceive data: Data) {
-        self.receivedData = data
     }
 }
 
