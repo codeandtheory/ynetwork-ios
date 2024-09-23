@@ -39,6 +39,6 @@ extension FileUploadProgress: URLSessionTaskDelegate, URLSessionDataDelegate {
     ) {
         // clean up the task now that the final response for the upload was received
         receive(data: data, forKey: dataTask.taskIdentifier)
-        unregisterCompletion(forKey: dataTask.taskIdentifier)
+        unregisterUploadCompletion(forKey: dataTask.taskIdentifier)
     }
 }
