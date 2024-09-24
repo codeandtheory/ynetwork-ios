@@ -15,7 +15,7 @@ import Foundation
 /// to optionally track progress for large file upload tasks.
 internal class FileUploadProgress: FileProgress { }
 
-extension FileUploadProgress: URLSessionTaskDelegate {
+extension FileUploadProgress: URLSessionTaskDelegate, URLSessionDataDelegate {
     func urlSession(
         _ session: URLSession,
         task: URLSessionTask,
@@ -30,5 +30,15 @@ extension FileUploadProgress: URLSessionTaskDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         // clean up the task now that we're finished with it
         unregister(forKey: task.taskIdentifier)
+    }
+    
+    public func urlSession(
+        _ session: URLSession,
+        dataTask: URLSessionDataTask,
+        didReceive data: Data
+    ) {
+        // clean up the task now that the final response for the upload was received
+        receive(data: data, forKey: dataTask.taskIdentifier)
+        unregisterUploadCompletion(forKey: dataTask.taskIdentifier)
     }
 }

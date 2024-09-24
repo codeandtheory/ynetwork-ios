@@ -161,10 +161,12 @@ open class NetworkManager: NSObject {
     /// - Parameters:
     ///   - request: the upload network request to submit
     ///   - progress: progress handler (will be called back on main thread)
+    ///   - completionHandler: file upload handler (will be called back on URLSession background thread).
     /// - Returns: a cancelable upload task if one was able to be created, otherwise nil if no task was issued
     @discardableResult open func submitBackgroundUpload(
         _ request: NetworkRequest,
-        progress: ProgressHandler? = nil
+        progress: ProgressHandler? = nil,
+        completionHandler: FileUploadHandler? = nil
     ) -> Cancelable? {
         guard let urlRequest = try? buildUrlRequest(request: request) else { return nil }
 
@@ -178,7 +180,7 @@ open class NetworkManager: NSObject {
 
         // creating the upload task copies the file
         let task = try? configuration?.networkEngine.submitBackgroundUpload(urlRequest, fileUrl: localURL)
-        fileUpload.register(task, progress: progress)
+        fileUpload.registerUpload(task, progress: progress, completion: completionHandler)
         return task
     }
     
